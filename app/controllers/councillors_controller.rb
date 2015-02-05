@@ -38,7 +38,7 @@ class CouncillorsController < ApplicationController
 
 	def destroy
 	    @councillor = Councillor.find(params[:id])
-	    @councllor.destroy
+	    @councillor.destroy
 	    redirect_to councillors_url
 	end
 
