@@ -1,1 +1,8 @@
 <h1>Toronto City Councillors</h1>
+
+
+<% @councillors.each do |councillor| %>
+	<div><%= councillor.name %>, <%= councillor.ward %>, <%= councillor.email %>, <%= councillor.phone %>, <%= councillor.website %></div>
+
+	<img src="<%= councillor.picture_url %>">
+<% end %>
