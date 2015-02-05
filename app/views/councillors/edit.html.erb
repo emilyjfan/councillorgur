@@ -1,0 +1,31 @@
+<h1>Edit A Councillor</h1>
+
+<%= form_for @councillor do |f| %>
+	
+	<p>
+		<%= f.label :name, "Councillor's Full Name" %>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :ward, "Ward" %>
+		<%= f.text_field :ward %>
+	</p>
+	<p>
+		<%= f.label :email, "Email" %>
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :phone, "Phone" %>
+		<%= f.text_field :phone %>
+	</p>
+	<p>
+		<%= f.label :website, "Website" %>
+		<%= f.text_field :website %>
+	</p>
+	<p>
+		<%= f.label :picture_url, "Picture Url" %>
+		<%= f.text_field :picture_url %>
+	</p>
+		<%=f.submit %>
+
+<% end %>

@@ -5,3 +5,6 @@
 <div>
 	<%= @councillor.ward %>, <%= @councillor.email %>, <%= @councillor.phone %>, <%= @councillor.website %>
 </div>
+
+<br>
+<%= link_to "Edit", edit_councillor_path(@councillor) %>

@@ -14,8 +14,32 @@ class CouncillorsController < ApplicationController
 
 	def create
 		@councillor = Councillor.new(councillor_params)
-		@councillor.save
-		render :text => @councillor
+		if @councillor.save
+			redirect_to councillors_url
+		else 
+			render new
+		end
+	end
+
+	def edit
+    	@councillor = Councillor.find(params[:id])
+	end
+
+
+	def update
+	    @councillor = Councillor.find(params[:id])
+
+	    if @councillor.update_attributes(councillor_params)
+	      redirect_to "/councillors/#{@councillor.id}"
+	    else
+	      render :edit
+		end
+	end	
+
+	def destroy
+	    @councillor = Councillor.find(params[:id])
+	    @councllor.destroy
+	    redirect_to councillors_url
 	end
 
 	private

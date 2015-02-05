@@ -4,5 +4,5 @@
 <% @councillors.each do |councillor| %>
 	<div><%= councillor.name %>, <%= councillor.ward %>, <%= councillor.email %>, <%= councillor.phone %>, <%= councillor.website %></div>
 
-	<img src="<%= councillor.picture_url %>">
+<%= link_to image_tag(councillor.picture_url), "/councillors/#{councillor.id}" %>
 <% end %>
